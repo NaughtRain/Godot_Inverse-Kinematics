@@ -15,3 +15,10 @@ The "calculate_point" subroutine adds together the radius of every point before 
 "circle_intersections" function to find where the point should be located.
 (Since the "circle_intersections" function returns two options, it uses the "weight" parameter to find which one it should use.)
 
+the "circle_intersections" function finds the two intersection points of two circles.
+if the circles are not intersecting, it returns the closest possible position to circle2 from circle1 -
+this is to ensure that the arm does not extend further than it should, when the target position is placed further than it can reach.
+It then finds the closes position from both of the circles - then finds the direction it needs to travel to go "up" relative to both of the circles.
+It then uses some triganometry to find the distance it needs to travel "up" to get to the intersection point.
+It returns two options - the middle point plus the distance "up" , and the middle point minus the distance "up"
+
