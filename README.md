@@ -11,3 +11,7 @@ The "KinematicManager.inverse_kinematics" subroutine is the only one that the us
 it creates an array of all the points, then calls the "calculate_point" subroutine using the point, and the location of the previous point
 (or the target location, for the first time it is called).
 
+The "calculate_point" subroutine adds together the radius of every point before the current point, and calls the
+"circle_intersections" function to find where the point should be located.
+(Since the "circle_intersections" function returns two options, it uses the "weight" parameter to find which one it should use.)
+
